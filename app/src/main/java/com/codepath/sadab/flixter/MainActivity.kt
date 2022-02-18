@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         rvMovies.layoutManager=LinearLayoutManager(this)
 
         val client=AsyncHttpClient()
+
         client.get(NOW_PLAYING_URL,object: JsonHttpResponseHandler(){
             override fun onFailure(statusCode: Int, headers: Headers?, response: String?, throwable: Throwable?
             ) {
